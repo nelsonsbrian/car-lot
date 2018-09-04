@@ -64,7 +64,8 @@ public class Program
     Console.WriteLine("Pick from the following options:");
     Console.WriteLine("1) See all of the cars available");
     Console.WriteLine("2) See what cars are worth buying");
-    Console.WriteLine("3) Exit program");
+    Console.WriteLine("3) Filter cars from the list");
+    Console.WriteLine("4) Exit program");
   }
 
   public static void Main()
@@ -84,7 +85,7 @@ public class Program
 
     ResetProgram();
     string menu;
-    Console.WriteLine("Enter your number:");
+    Console.WriteLine("Enter a menu number:");
     menu = Console.ReadLine();
     if (menu == "1")
     {
@@ -123,9 +124,16 @@ public class Program
       }
       Main();
     } else if (menu == "3")
+
+    {
+    } else if (menu == "4")
     {
       Console.WriteLine("Thank for visiting Joe's Car Lot! Come back anytime.");
       Environment.Exit(0);
+    } else
+    {
+      Console.WriteLine("That is not a valid number in the menu.");
+      ResetProgram();
     }
   }
 }
